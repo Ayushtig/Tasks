@@ -1,2 +1,4 @@
 # Tasks
-These are the various tasks related to WEB DEVELOPMENT.
+This repos will mainly contain various tasks related to web development projects.
+
+Please share your views regarding the same, hope you will like it.
