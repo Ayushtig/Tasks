@@ -12,3 +12,10 @@ Please share your views regarding the same, hope you will like it.
 # Task 2
 
 ![task4_done](https://user-images.githubusercontent.com/86613525/226433382-ce7819a1-04c5-4387-9f10-5eb38ef82fc2.png)
+
+
+# Task 3
+
+![task5_done](https://user-images.githubusercontent.com/86613525/226769406-f04b066b-3e3e-4ff1-b588-95b28694bd9a.png)
+
+ 
