@@ -21,8 +21,7 @@ Please share your views regarding the same, hope you will like it.
  
 # Task 7
 
-https://user-images.githubusercontent.com/86613525/230793224-e602e393-1b19-4827-bc45-35db7de12f50.mp4
-
+https://github.com/Ayushtig/Tasks/assets/86613525/136f5cae-8af2-4388-bf8b-7ffc9c884070
 
 # Task 8
 
