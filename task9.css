@@ -125,7 +125,27 @@ input::-webkit-inner-spin-button{
 }
 #temptypes1 option{
     background-color:#29323c;
-} 
+}
+button{
+    position: relative;
+    width: 20vw;
+    height: 7vh;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5px;
+    font-size: 2vw;
+    background-color: #27333f;
+    color: #cfc7c7;
+    border: 0.1px solid #435f80;
+    border-radius: 15px;
+    font-weight: 500;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+button:hover{
+    border: 0.1px solid #fff;
+    color: #fff;
+}
 #contents #elem2{
     width: 100%;
     height: 50%;
@@ -133,10 +153,18 @@ input::-webkit-inner-spin-button{
     align-items: center;
     justify-content: center;
 }
-#elem2 #result{
+#elem2 #calc{
     width: 50%;
     height: 100%;
-    padding: 10px 30px;
+    padding:10px 30px;  
+}
+#calc span{
+    position: relative;
+    top: 35%;
+    color: #fff;
+    font-size: 3vw;
+    transform: translate(-50%,-50%);
+    border-bottom: 1px solid #fff;
 }
 #elem2 #res-type{
     width: 50%;
@@ -157,28 +185,4 @@ input::-webkit-inner-spin-button{
 }
 #temptypes2 option{
     background-color:#29323c;
-}
-#calculate{
-    width: 100%;
-    height: 10vh;
-}
-#calculate button{
-    position: relative;
-    width: 20vw;
-    height: 7vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 5px;
-    font-size: 2vw;
-    background-color: #27333f;
-    color: #cfc7c7;
-    border: 0.1px solid #435f80;
-    border-radius: 15px;
-    font-weight: 500;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
-}
-#calculate button:hover{
-    border: 0.1px solid #fff;
-    color: #fff;
 }
