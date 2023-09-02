@@ -12,7 +12,6 @@
         <div id="conv">
             <div id="nav">
                 <div id="part1"><time id='time'></time></div>
-                <!-- <div id="nopart"></div> -->
                 <div id="part2">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAf0lEQVR4nO2TwQ2AMBDDbv/F8vRIZQNUHpUC2FL/vTiZEdmCZO28aQcPKQONlIFGykAjZaCRsoRpNeIh0cgZrFas1hmsVqzWz6rF4Y/hIQ/RSKzWcux3uJG4keVGXrkRyj6Gh6QrYTSSroTRSLoSRiPpShiNpCthNJKPGJHp4ALJ2XzyscTRjQAAAABJRU5ErkJggg==">
                     <i class="ri-wifi-fill"></i>
@@ -23,44 +22,38 @@
                 <h1>Temperature converter</h1>
             </div>
             <div id="contents">
-                <div id="elem1">
+                  <div id="elem1">
                     <div id="enter">
-                        <label id="label1">Degrees</label>
-                        <input type="number" name="temperature" id="input1" min="-1000" max="1000" value="0" required>
+                        <label id="label1" for="temp">Degrees</label>
+                        <input type="number" id="temp" name="temp">
                     </div>
                     <div id="ent-type">
                         <label id="label2">Type</label>
-                        <select id="temptypes1" onchange="inputOption(this.value)" value="">
-                            <option disabled selected>Choose</option>
-                            <option value="Fahrenheit">Fahrenheit</option>
-                            <option value="Kelvin">Kelvin</option>
-                            <option value="Celsius">Celsius</option>
+                        <select id="temptypes1" name="temptypes1" class="">
+                            <option id="fah" value="fah"><span>&#176;</span>Fahrenheit</option>
+                            <option id="cel" value="cel"><span>&#176;</span>Celsius</option>
+                            <option id="kel" value="kel"><span>&#176;</span>Kelvin</option>
                           </select>
                     </div>
                 </div>
                 <div id="elem2">
-                    <div id="result">
-                        <label id="label3">Result</label>
-                        <input type="number" name="temperature" id="input2" min="-1000" max="1000" value="">
+                    <div id="calc">
+                        <span id="resultCon"></span>
                     </div>
                     <div id="res-type">
-                        <label id="label4">Type</label>
-                        <select id="temptypes2" onchange="outputOption(this.value)" value="">
-                            <option disabled selected>Choose</option>
-                            <option value="Fahrenheit">Fahrenheit</option>
-                            <option value="Kelvin">Kelvin</option>
-                            <option value="Celsius">Celsius</option>
+                        <label id="label3">Type</label>
+                        <select id="temptypes2" name="temptypes2" class="">
+                            <option id="fah" value="fah"><span>&#176;</span>Fahrenheit</option>
+                            <option id="cel" value="cel"><span>&#176;</span>Celsius</option>
+                            <option id="kel" value="kel"><span>&#176;</span>Kelvin</option>
                           </select>
-                    </div>
+                    </div>    
                 </div>
-            </div>
-            <div id="calculate">
-                <button type="submit" id="btn" onclick="calculate('input1','input2')">Submit</button>
-            </div>
+                    <button type="submit" id="btn">Submit</button>
+                
+                </div>
         </div>
     </div>
-
-
 
 <script src="task9.js"></script>
 </body>
