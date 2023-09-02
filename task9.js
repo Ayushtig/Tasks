@@ -6,61 +6,57 @@ function showTime() {
 }
 showTime();
 
-var label1 = document.querySelector("#label1");
-var label2 = document.querySelector("#label2");
-var label3 = document.querySelector("#label3");
-var label4 = document.querySelector("#label4");
+const Elem = document.querySelector("#resultCon");
+const degree = document.querySelector("#temp");
+const convertBtn = document.querySelector("#btn");
+const tempType1 = document.querySelector("#temptypes1");
+const tempType2 = document.querySelector("#temptypes2");
 
-var input = document
-  .querySelector("input")
-  .addEventListener("click", function () {
-    label1.style.color = "white";
-    label3.style.color = "white";
-  });
-var option = document
-  .querySelector("#temptypes1")
-  .addEventListener("click", function () {
-    label2.style.color = "white";
-  });
-var option = document
-  .querySelector("#temptypes2")
-  .addEventListener("click", function () {
-    label4.style.color = "white";
-  });
+window.addEventListener("load", () => {
+  degree.value = "";
+  Elem.innerHTML = "";
+});
 
-function inputOption(e) {
-  document.getElementById(temptypes1).value = e.target.value;
-}
-function outputOption(s) {
-  document.getElementById(temptypes2).value = s.target.value;
-}
+convertBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  convertToCelsius();
+});
 
-var select1=document.getElementById(temptypes1).value;
-var select2=document.getElementById(temptypes2).value;
+function convertToCelsius() {
+  let inputValue = degree.value;
 
-function calculate(input1, input2) {
-  if (select1 == "Celsius" && select2 == "Fahrenheit") {
-    var temp = document.getElementById(input1).value;
-    document.getElementById(input2).value = (parseFloat(temp) * 9) / 5 + 32;
-  } else if ((select1 = "Celsius" && select2 == "Kelvin")) {
-    var temp = document.getElementById(input1).value;
-    document.getElementById(input2).value = parseFloat(temp) + 273.15;
-  } else if ((select1 = "Fahrenheit" && select2 == "Celsius")) {
-    var temp = document.getElementById(input1).value;
-    document.getElementById(input2).value = ((parseFloat(temp) - 32) * 5) / 9;
-  } else if ((select1 = "Fahrenheit" && select2 == "Kelvin")) {
-    var temp = document.getElementById(input1).value;
-    document.getElementById(input2).value =
-      ((parseFloat(temp) - 32) * 5) / 9 + 273.15;
-  } else if ((select1 = "Kelvin" && select2 == "Celsius")) {
-    var temp = document.getElementById(input1).value;
-    document.getElementById(input2).value = parseFloat(temp) - 273.15;
-  } else if ((select1 = "Kelvin" && select2 == "Fahrenheit")) {
-    var temp = document.getElementById(input1).value;
-    document.getElementById(input2).value =
-      ((parseFloat(temp) - 273.15) * 9) / 5 + 32;
-  } else if (select1 == select2) {
-    var temp = document.getElementById(input1).value;
-    document.getElementById(input2).value = parseFloat(temp);
+if (tempType1.value === "fah" && tempType2.value === "cel") {
+    const FahrenheitToCelsius = (inputValue - 32) * (5 / 9);
+    Elem.innerHTML = `${FahrenheitToCelsius.toFixed(3)} `;
+  } 
+  
+  else if (tempType1.value === "cel" && tempType2.value === "fah") {
+    const CelToFah = ((inputValue* 9)/5 ) + 32;
+    Elem.innerHTML = `${CelToFah.toFixed(3)} `;
+  } 
+  
+  else if (tempType1.value === "cel" && tempType2.value === "kel") {
+    const CelToKel = (inputValue - 0) + 273.15;
+    Elem.innerHTML = `${CelToKel.toFixed(3)} `;
+  } 
+  
+  else if (tempType1.value === "kel" && tempType2.value === "cel") {
+    const KelToCel = (inputValue - 273.15) ;
+    Elem.innerHTML = `${KelToCel.toFixed(3)} `;
+  } 
+  
+  else if (tempType1.value === "kel" && tempType2.value === "fah") {
+    const KelToFah = (((inputValue - 273.15)* 9)/5 ) + 32;
+    Elem.innerHTML = `${KelToFah.toFixed(3)} `;
+  }
+
+  else if (tempType1.value === "fah" && tempType2.value === "kel") {
+    const FahToKel = (((inputValue - 32)* 5)/9 ) + 273.15;
+    Elem.innerHTML = `${FahToKel.toFixed(3)} `;
+  }
+
+  else {
+    const Equal = (inputValue - 0);
+    Elem.innerHTML = `${Equal.toFixed(3)} `;
   }
 }
